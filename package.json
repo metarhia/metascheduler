@@ -1,0 +1,44 @@
+{
+  "name": "metascheduler",
+  "version": "0.0.1",
+  "author": "Timur Shemsedinov <timur.shemsedinov@gmail.com>",
+  "license": "MIT",
+  "description": "Metarhia task scheduler",
+  "keywords": ["node.js", "metarhia", "task", "scheduler", "cron", "thread"],
+  "main": "metascheduler.js",
+  "types": "metascheduler.d.ts",
+  "files": ["metascheduler.d.ts"],
+  "engines": {
+    "node": "16 || 18 || 19 || 20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metarhia/metascheduler.git"
+  },
+  "bugs": {
+    "url": "https://github.com/metarhia/metascheduler/issues",
+    "email": "timur.shemsedinov@gmail.com"
+  },
+  "homepage": "https://metarhia.com",
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/tshemsedinov"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run types && metatests test/",
+    "types": "tsc -p tsconfig.json",
+    "lint": "eslint . && prettier -c \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.ts\"",
+    "fmt": "prettier --write \"**/*.js\" \"**/*.json\" \"**/*.md\" \"**/*.ts\""
+  },
+  "devDependencies": {
+    "@types/node": "^20.1.1",
+    "eslint": "^8.35.0",
+    "eslint-config-metarhia": "^8.1.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "metatests": "^0.8.2",
+    "prettier": "^2.8.4",
+    "typescript": "^5.0.4"
+  }
+}
